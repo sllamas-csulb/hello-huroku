@@ -132,6 +132,6 @@ app.post("/edit/:id", (req, res) => {
     });
   });
   
-app.listen( 3000, () => {
+app.listen( 80, () => {
     console.log("Server started (http://localhost:3000/) !");
   });
