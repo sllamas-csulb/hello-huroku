@@ -132,6 +132,6 @@ app.post("/edit/:id", (req, res) => {
     });
   });
   
-app.listen( 80, () => {
+app.listen( process.env.PORT || 3000, () => {
     console.log("Server started (http://localhost:3000/) !");
   });
