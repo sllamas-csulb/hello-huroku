@@ -4,12 +4,13 @@ const { Pool } = require("pg");
 
 //Create database
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "postgres",
-  password: "mysql", //Never store secrets in source control
-  port: 5432
+  user: process.env.PSQL_USER,
+  host: process.env.PSQL_HOST,
+  database: process.env.PSQL_DATABASE,
+  password: process.env.PSQL_PASSWORD, 
+  port: process.env.PSQL_PORT
 });
+
 console.log("Successful connection to the database");
 
 const sql_create = `CREATE TABLE IF NOT EXISTS Books (
